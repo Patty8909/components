@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductCategoryRow from './product-category-row'
 import ProductRow from './product-row'
+import PropTypes from 'prop-types'
 
 const ProductTable = ({products}) => {
     const rows = [];
@@ -26,6 +27,10 @@ const ProductTable = ({products}) => {
         <tbody>{rows}</tbody>
       </table>
     )
+}
+
+ProductTable.propTypes = {
+    products: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired
 }
 
 export default ProductTable
